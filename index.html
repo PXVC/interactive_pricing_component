@@ -16,17 +16,47 @@
 			href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="scss/style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Frontend Mentor | Interactive pricing component</title>
 	</head>
 	<body>
-		<img src="images/bg-pattern.svg" alt="bg-pattern" class="background pattern" />
+		<img
+			src="images/bg-pattern.svg"
+			alt="background pattern"
+			class="bg-pattern"
+		/>
 		<div class="intro">
 			<h2 class="intro__heading">Simple, traffic-based pricing</h2>
 			<p class="intro__paragraph">
 				Sign-up for our 30-day trial. No credit card required.
 			</p>
-			<img src="images/pattern-circles.svg" alt="pattern circle" class="circle-pattern" />
+		</div>
+		<div class="main-card">
+			<div class="main-card__pricing-part">
+				<div class="main-card__header">
+					<h2 class="main-card__page-views">100K Pageviews</h2>
+					<div class="main-card__pricing-wrapper">
+						<h1 class="main-card__pricing d-ib">
+							$
+							<h2 class="main-card__per-month-text d-ib">/month</h2>
+						</h1>
+					</div>
+				</div>
+				<div class="main-card__slider-bar">
+					<input
+					type="range"
+					name=""
+					min="0"
+					max="100"
+					value="50"
+					step="10"
+					id="input-slider"
+					class="main-card__input-slider"
+				/>
+					<span class="main-card__slider-fill"></span>
+				</div>
+			</div>
+			<div class="pricing-card__footer"></div>
 		</div>
 		<div class="attribution">
 			Challenge by
