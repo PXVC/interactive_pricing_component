@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+:root {
+  font-size: 15px;
+}
+
+body {
+  background-color: #fafbff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 60vh;
+  z-index: -999999;
+}
+
+.intro {
+  text-align: center;
+  color: #293356;
+  background: url("../images/pattern-circles.svg") top no-repeat;
+  height: 145px;
+  padding: 37px 0;
+}
+
+.intro__heading {
+  font-size: 2rem;
+}
+
+.intro__paragraph {
+  font-size: 1.1rem;
+  color: #858fad;
+}
+
+.main-card {
+  background-color: white;
+  color: #858fad;
+  padding: 2rem 2rem 1rem;
+  -webkit-box-shadow: 0px 0px 11px -2px #293356;
+          box-shadow: 0px 0px 11px -2px #293356;
+  width: 50vw;
+}
+
+.main-card h2 {
+  font-size: 1.1rem;
+}
+
+.main-card input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background-color: #eaeefb;
+  border-radius: 1em;
+}
+
+.main-card input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  background: #10d5c2 url("../images/icon-slider.svg") center no-repeat;
+  border-radius: 50%;
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.main-card__slider-fill {
+  height: 10px;
+  width: 326px;
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateY(-210%);
+          transform: translateY(-210%);
+  background: red;
+  left: 0;
+}
+
+.main-card .d-ib {
+  display: inline-block;
+}
+
+.main-card__pricing-part .main-card__header, .main-card__pricing-part .main-card__header .main-card__pricing-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-card__pricing-part .main-card__header .main-card__pricing {
+  color: #293356;
+}
+
+.main-card__pricing-part .main-card__header .main-card__pricing::after {
+  content: '';
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */
