@@ -70,8 +70,11 @@ body {
   -webkit-appearance: none;
   width: 100%;
   height: 10px;
+  margin-top: 35px;
   background-color: #eaeefb;
   border-radius: 1em;
+  border: none;
+  outline: none;
 }
 
 .main-card input::-webkit-slider-thumb {
@@ -83,17 +86,20 @@ body {
   position: relative;
   z-index: 9999;
   cursor: pointer;
+  -webkit-filter: drop-shadow(0px 10px 15px #10d5c2);
+          filter: drop-shadow(0px 10px 15px #10d5c2);
 }
 
 .main-card__slider-fill {
   height: 10px;
-  width: 326px;
+  width: 50%;
   display: inline-block;
   position: relative;
+  left: 0;
   -webkit-transform: translateY(-210%);
           transform: translateY(-210%);
-  background: red;
-  left: 0;
+  background: #a5f3eb;
+  border-radius: 50px;
 }
 
 .main-card .d-ib {
@@ -114,10 +120,66 @@ body {
 
 .main-card__pricing-part .main-card__header .main-card__pricing {
   color: #293356;
+  font-size: 45px;
 }
 
 .main-card__pricing-part .main-card__header .main-card__pricing::after {
   content: '';
   margin-right: 0.5rem;
+}
+
+.main-card__pricing-part .main-card__billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  margin-top: 25px;
+}
+
+.main-card__toggle {
+  width: 60px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.main-card__toggle span {
+  display: inline-block;
+}
+
+.main-card__toggle .toggle-bg {
+  background-color: #ced7ee;
+  width: inherit;
+  height: inherit;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.main-card__toggle .toggle-bg:hover {
+  background-color: #a5f3eb;
+}
+
+.main-card__toggle .toggle-btn {
+  width: 26px;
+  height: inherit;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.main-card__toggle .toggle-btn.active {
+  -webkit-transform: translate(65%, -50%);
+          transform: translate(65%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
