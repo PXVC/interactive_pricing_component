@@ -21,7 +21,8 @@ $dark-desaturated-blue: hsl(227, 35%, 25%); // Text & CTA Background
 	font-family: 'Manrope', sans-serif;
 }
 
-:root {
+:root,
+html {
 	font-size: 15px;
 }
 
@@ -65,8 +66,10 @@ body {
 	background-color: $white;
 	color: $grayish-blue;
 	padding: 2rem 2rem 1rem;
+	margin-top: 20px;
 	box-shadow: 0px 0px 11px -2px $dark-desaturated-blue;
 	width: 50vw;
+	border-radius: 8px;
 
 	h2 {
 		font-size: 1.1rem;
@@ -92,6 +95,11 @@ body {
 			z-index: 9999;
 			cursor: pointer;
 			filter: drop-shadow(0px 10px 15px $strong-cyan);
+
+			&:hover {
+				filter: contrast(50%) brightness(120%)
+					drop-shadow(0px 10px 15px $strong-cyan);
+			}
 		}
 	}
 	&__slider-fill {
@@ -110,6 +118,8 @@ body {
 	}
 
 	&__pricing-part {
+		padding: 0 0 30px;
+
 		#{$self}__header {
 			display: flex;
 			justify-content: space-between;
@@ -171,10 +181,38 @@ body {
 			background-color: $white;
 			border-radius: 50%;
 			transition: transform 200ms ease;
-			
+
 			&.active {
 				transform: translate(65%, -50%);
 			}
 		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 0 0;
+
+		ul {
+			list-style-image: url('../images/icon-check.svg');
+			list-style-position: inside;
+			line-height: 30px;
+		}
+	}
+}
+
+.btn-submit {
+	width: 12rem;
+	height: 2.5rem;
+	border-radius: 50px;
+	outline: none;
+	border: none;
+	color: $pale-blue;
+	background-color: $dark-desaturated-blue;
+	cursor: pointer;
+
+	&:hover {
+		color: $white;
 	}
 }
