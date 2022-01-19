@@ -1,0 +1,42 @@
+@media only screen and (max-width: 817px) {
+  :root,
+  html {
+    font-size: 13px;
+  }
+  
+  .intro {
+    &__paragraph {
+      width: 236px;
+    }
+  }
+  
+  .main-card {
+    &__header {
+      flex-direction: column;
+      row-gap: 7rem;
+    }
+
+    &__slider-bar {
+      position: relative;
+      z-index: 999;
+      transform: translateY(-150px);
+    }
+
+    &__billing {
+      margin: 0 !important;
+      column-gap: 10px !important;
+    }
+
+    &__footer {
+      flex-direction: column;
+      row-gap: 30px;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 524px) {
+  .main-card {
+    width: 70vw;
+  }
+}

@@ -1,0 +1,42 @@
+@media only screen and (max-width: 817px) {
+  :root,
+  html {
+    font-size: 13px;
+  }
+  .intro__paragraph {
+    width: 236px;
+  }
+  .main-card__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 7rem;
+  }
+  .main-card__slider-bar {
+    position: relative;
+    z-index: 999;
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  .main-card__billing {
+    margin: 0 !important;
+    -webkit-column-gap: 10px !important;
+            column-gap: 10px !important;
+  }
+  .main-card__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 524px) {
+  .main-card {
+    width: 70vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
