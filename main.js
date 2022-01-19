@@ -7,8 +7,16 @@ let pricing = document.getElementById('pricing'),
 	/* 16 is half of maximum price. Then the maximum price is 32 and the minimum
 value is 3.2 (32 / 10, 10 is slider step) */
 	prices = [3.2, 3.2, 6.4, 9.6, 12.8, 16, 19.2, 22.4, 25.6, 28.8, 32],
-	sliderValues = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+	sliderValues = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+	discountText = document.getElementById('discount'),
+	count = 0;
 
+window.addEventListener('load', (e) => {
+	if (window.innerWidth <= 857 && discountText.innerHTML != '-25%') {
+		discountText.innerHTML = '-25%';
+		discountText.style.padding = '2px 8px';
+	}
+});
 slider.addEventListener('input', () => {
 	sliderValues.forEach((value, index) => {
 		if (slider.value == value) {
@@ -25,4 +33,11 @@ slider.addEventListener('input', () => {
 toggleWrapper.addEventListener('click', () => {
 	toggleBtn.classList.toggle('active');
 	toggleBg.classList.toggle('active');
+	count++;
+
+	if (count % 2 != 0) {
+		discountText.style.opacity = '1';
+	} else {
+		discountText.style.opacity = '0';
+	}
 });
